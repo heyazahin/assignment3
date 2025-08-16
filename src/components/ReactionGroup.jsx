@@ -2,15 +2,12 @@ import React, { useState } from "react";
 import "./ReactionGoup.css";
 
 const OPTIONS = [
-  {
-    key: "like",
-    label: "Like",
-    icon: "👍",
-  },
+  { key: "like", label: "Like", icon: "👍" },
   { key: "love", label: "Love", icon: "❤️" },
   { key: "angry", label: "Angry", icon: "😡" },
-  { key: "sad", label: "sad", icon: "😢" },
+  { key: "sad", label: "Sad", icon: "😢" },
 ];
+
 export default function ReactionGroup() {
   const [counts, setCounts] = useState({
     like: 0,
@@ -20,12 +17,11 @@ export default function ReactionGroup() {
   });
 
   const handleReactionClick = (key) => {
-    setCounts((prev) => ({
-      ...prev,
-      [key]: prev[key] + 1,
-    }));
+    setCounts((prev) => ({ ...prev, [key]: prev[key] + 1 }));
   };
+
   const total = Object.values(counts).reduce((a, b) => a + b, 0);
+
   return (
     <div className="reaction-group">
       {OPTIONS.map((opt) => {
@@ -38,8 +34,7 @@ export default function ReactionGroup() {
             className="reaction-button"
             onClick={() => handleReactionClick(opt.key)}
           >
-            <span>{opt.icon}</span>
-            {opt.label}({counts[opt.key]}/{percent}%)
+            <span>{opt.icon}</span> {opt.label} ({counts[opt.key]}/{percent}%)
           </button>
         );
       })}

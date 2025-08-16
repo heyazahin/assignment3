@@ -2,9 +2,9 @@
   display: flex;
   gap: 10px;
 }
-.raction-button {
-  border: 1 px solid #ccc;
-  padding: 5 px 12 px;
+.reaction-button {
+  border: 1px solid #ccc;
+  padding: 5px 12px;
   border-radius: 8px;
   background: white;
   cursor: pointer;
