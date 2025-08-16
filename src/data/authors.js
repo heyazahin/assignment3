@@ -1,8 +1,10 @@
+import Download from "../Pic/download2.jpg";
+
 export const authors = [
   {
     id: 1,
-    name: "A",
-    image: "https://picsum.photos/200?random=2",
+    name: "Usman Munir",
+    image: Download,
   },
   {
     id: 2,

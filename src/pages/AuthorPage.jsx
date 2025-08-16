@@ -22,7 +22,11 @@ export default function AuthorPage() {
         alt={author.name}
         style={{ width: "150px", borderRadius: "50%" }}
       />
-      <p>Short bio:Lorem ipsum dolor sit amet..</p>
+      <p>
+        Short bio:Usman Munir is a Senior Technical Program Manager in Microsoft
+        Research's AI for Science team, where he oversees a portfolio of drug
+        discovery initiatives.
+      </p>
     </div>
   );
 }
