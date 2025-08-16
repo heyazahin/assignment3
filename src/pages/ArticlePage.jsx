@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ReactionGroup from "../components/ReactionGroup";
 import List from "../components/List";
 import React from "react";
+import "./ArticlePage.css";
 
 export default function ArticlePage() {
   const article =
@@ -16,23 +17,40 @@ export default function ArticlePage() {
   }
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>{article.title}</h1>
-      <p>
-        <strong>Author</strong>
-        {author ? (
-          <Link to={`/author/${author.id}`}>{author.name}</Link>
-        ) : (
-          "Unknown"
+    <div className="article-page">
+      <div style={{ padding: "20px" }}>
+        <h1>{article.title}</h1>
+        <p>
+          <strong>Author</strong>
+          {author ? (
+            <Link to={`/author/${author.id}`}>{author.name}</Link>
+          ) : (
+            "Unknown"
+          )}
+        </p>
+        {author && (
+          <div className="author-box">
+            <img
+              src={author.image}
+              alt={author.name}
+              className="author-image"
+            />
+            <span>{author.name}</span>
+          </div>
         )}
-      </p>
-      <img
-        src={article.cover}
-        alt={article.title}
-        style={{ width: "100%", maxWidth: "600px" }}
-      />
-      <p>{article.content}</p>
-      <ReactionGroup />
+
+        <div className="article-content"></div>
+        <img
+          src={article.cover}
+          alt={article.title}
+          style={{ width: "100%", maxWidth: "600px" }}
+        />
+        <div className="article-text">
+          <p>{article.content}</p>
+          <ReactionGroup />
+        </div>
+      </div>
+
       <h2 style={{ marginTop: "20px" }}>Comments</h2>
       <List pageSize={3} />
     </div>

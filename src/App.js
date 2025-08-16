@@ -5,7 +5,7 @@ import AuthorPage from "./pages/AuthorPage";
 function App() {
   return (
     <>
-      <h2> App is rendering</h2>
+      <h2> </h2>
       <Routes>
         <Route path="/" element={<ArticlePage />} />
         <Route path="/author/:id" element={<AuthorPage />} />
