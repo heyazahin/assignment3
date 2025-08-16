@@ -1,0 +1,16 @@
+.reaction-group {
+  display: flex;
+  gap: 10px;
+}
+.raction-button {
+  border: 1 px solid #ccc;
+  padding: 5 px 12 px;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-weight: normal;
+}
+.reaction-button.active {
+  background: #eef2ff;
+  border-color: #667eea;
+}
